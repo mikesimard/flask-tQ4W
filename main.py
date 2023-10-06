@@ -57,9 +57,10 @@ def show_info():
         <script type="text/javascript">
 
         $(document).ready(function(){
-       $('head').append('<meta name="current_url" content="' + window.location.href + '" />');
+             
             if(typeof(atlas) == 'object'){
                 try {
+                        
                         atlas.config("juggcash.com","JC","TYPE_IN_REFERRAL_CODE");
                         atlas.autoTrack();
                 } catch(e){
