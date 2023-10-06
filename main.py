@@ -51,7 +51,10 @@ def show_info():
         <script type="text/javascript" src='//cdn.adultforce.com/atlas/atlaslib.min.js'></script>
         <script type="text/javascript" src='//cdn.adultforce.com/vortex/vortex.modern.min.js'></script>
         <script type="text/javascript" src='https://storage.googleapis.com/looker_vis/debug_external.js'></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script type="text/javascript">
+
+        $(document).ready(function(){
        
             if(typeof(atlas) == 'object'){
                 try {
@@ -61,6 +64,7 @@ def show_info():
                         // Log Exception
                 }
             }
+            });
           
         </script>
     </head>
