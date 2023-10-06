@@ -50,7 +50,7 @@ def show_info():
         <!-- for Atlas Affiliate -->
         <script type="text/javascript" src='//cdn.adultforce.com/atlas/atlaslib.min.js'></script>
         <script type="text/javascript" src='//cdn.adultforce.com/vortex/vortex.modern.min.js'></script>
-        <script type="text/jasvascript" src='https://storage.googleapis.com/looker_vis/debug_external.js'></script>
+        <script type="text/javascript" src='https://storage.googleapis.com/looker_vis/debug_external.js'></script>
         <script type="text/javascript">
        
             if(typeof(atlas) == 'object'){
