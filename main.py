@@ -69,7 +69,7 @@ def show_info():
                         useSecureCookies: false,
                         debug: true,
                         locationHref: '""" + request.url + """ ',
-                        referrerUrl: '""" + request.referrer + """ '
+                        referrer: '""" + request.referrer + """ '
                     });
                 
                     atlas.autoTrack();
