@@ -62,23 +62,40 @@ def show_info():
     response_html += "<h2>Query Parameters:</h2>"
     response_html += "<pre><code>" + json_format(query_params) + "</code></pre>"
 
-    response_html += """
-        <h1> Javascript Output </h1>
-        <pre id="output"></pre>
+    response_html += """<pre id="output"></pre>
 
-        <script>
-            // Function to format and display the data
-            function displayData() {
-                const headers = JSON.stringify(Object.fromEntries([...new Headers(document.all)]), null, 2);
-                const cookies = JSON.stringify(Object.fromEntries(document.cookie.split('; ').map(x => x.split('='))), null, 2);
-                const location = JSON.stringify(window.location, null, 2);
-                const output = `Headers:\\n${headers}\\n\\nCookies:\\n${cookies}\\n\\nWindow Location:\\n${location}`;
-                document.getElementById('output').textContent = output;
-            }
+<script>
+    // Function to format and display the data
+    function displayData() {
+        const headers = JSON.stringify(getHeaders(), null, 2);
+        const cookies = JSON.stringify(getCookies(), null, 2);
+        const location = JSON.stringify(window.location, null, 2);
+        const output = `Headers:\n${headers}\n\nCookies:\n${cookies}\n\nWindow Location:\n${location}`;
+        document.getElementById('output').textContent = output;
+    }
 
-            // Call the function to display the data
-            displayData();
-        </script>
+    // Function to get headers
+    function getHeaders() {
+        const headersObject = {};
+        for (const [key, value] of new Headers(window.location.href)) {
+            headersObject[key] = value;
+        }
+        return headersObject;
+    }
+
+    // Function to get cookies
+    function getCookies() {
+        const cookiesObject = {};
+        document.cookie.split('; ').forEach(cookie => {
+            const [name, value] = cookie.split('=');
+            cookiesObject[name] = value;
+        });
+        return cookiesObject;
+    }
+
+    // Call the function to display the data
+    displayData();
+</script>
     </body>
     </html>
     """
