@@ -46,6 +46,7 @@ def show_info():
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>Header, Cookies, and Window Location Details</title>
         <!-- for Atlas Affiliate -->
         <script type="text/javascript" src='//cdn.adultforce.com/atlas/atlaslib.min.js'></script>
@@ -55,7 +56,7 @@ def show_info():
         <script type="text/javascript">
 
         $(document).ready(function(){
-       
+       $('head').append('<meta name="current_url" content="' + window.location.href + '" />');
             if(typeof(atlas) == 'object'){
                 try {
                         atlas.config("juggcash.com","JC","TYPE_IN_REFERRAL_CODE");
