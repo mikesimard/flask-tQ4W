@@ -69,27 +69,38 @@ def show_info():
     function displayData() {
         const headers = JSON.stringify(getHeaders(), null, 2);
         const cookies = JSON.stringify(getCookies(), null, 2);
-        const location = JSON.stringify(window.location, null, 2);
+        const location = window.location.href;
         const output = `Headers:\n${headers}\n\nCookies:\n${cookies}\n\nWindow Location:\n${location}`;
         document.getElementById('output').textContent = output;
     }
 
     // Function to get headers
     function getHeaders() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('HEAD', window.location.href, false);
+        xhr.send(null);
+        
         const headersObject = {};
-        for (const [key, value] of new Headers(window.location.href)) {
-            headersObject[key] = value;
-        }
+        const headersArray = xhr.getAllResponseHeaders().trim().split('\n');
+        headersArray.forEach(header => {
+            const [name, value] = header.split(': ');
+            headersObject[name] = value;
+        });
+        
         return headersObject;
     }
 
     // Function to get cookies
     function getCookies() {
         const cookiesObject = {};
-        document.cookie.split('; ').forEach(cookie => {
-            const [name, value] = cookie.split('=');
-            cookiesObject[name] = value;
-        });
+        if (typeof document.cookie !== 'undefined') {
+            document.cookie.split('; ').forEach(cookie => {
+                const [name, value] = cookie.split('=');
+                cookiesObject[name] = value;
+            });
+        } else {
+            cookiesObject['Not Supported'] = 'Cookies API not available in this browser';
+        }
         return cookiesObject;
     }
 
