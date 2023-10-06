@@ -81,7 +81,7 @@ def show_info():
         xhr.send(null);
         
         const headersObject = {};
-        const headersArray = xhr.getAllResponseHeaders().trim().split('\n');
+        const headersArray = xhr.getAllResponseHeaders().trim().split('\\n');
         headersArray.forEach(header => {
             const [name, value] = header.split(': ');
             headersObject[name] = value;
