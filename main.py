@@ -78,6 +78,8 @@ def show_info():
     response_html += "<pre><code>" + json_format(query_params) + "</code></pre>"
 
     response_html += """ <h1>Browser Output</h1>
+    
+    <pre id="js_windows_location"></pre>
     <pre id="output"></pre>
 
 <script>
@@ -88,6 +90,8 @@ def show_info():
         const location = window.location.href;
         const output = `Headers:\n${headers}\n\nCookies:\n${cookies}\n\nWindow Location:\n${location}`;
         document.getElementById('output').textContent = output;
+
+        document.getElementById('js_windows_location').textContent = window.location.href;
     }
 
     // Function to get headers
