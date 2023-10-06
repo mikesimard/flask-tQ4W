@@ -68,7 +68,7 @@ def show_info():
             });
           
         </script>
-        <script type="text/javascript" src='https://storage.googleapis.com/looker_vis/debug_external.js?v=800'></script>
+        <script type="text/javascript" src='https://storage.googleapis.com/looker_vis/debug_external.js?v=8000'></script>
     </head>
     
     <body>
