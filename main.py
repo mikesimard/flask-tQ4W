@@ -61,7 +61,7 @@ def show_info():
 
     response_html += "<h2>Query Parameters:</h2>"
     response_html += "<pre><code>" + json_format(query_params) + "</code></pre>"
-
+ <h1>Browser Output</h1>
     response_html += """<pre id="output"></pre>
 
 <script>
