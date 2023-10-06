@@ -80,12 +80,12 @@ def show_info():
 
     response_html += """ <h1>Browser Output</h1>
     
-    
+    <pre>Window Location from external JS</pre>
+    <pre id="external_output"></pre>
     <pre>Window Location from internal JS</pre>
     <pre id="js_windows_location"></pre>
     <pre id="output"></pre>
-    <pre>Window Location from external JS</pre>
-    <pre id="external_output"></pre>
+    
 
 <script>
     // Function to format and display the data
