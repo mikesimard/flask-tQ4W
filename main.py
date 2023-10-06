@@ -71,10 +71,8 @@ def show_info():
                         locationHref: '""" + request.url + """ ',
                         referrerUrl: '""" + request.referrer + """ '
                     });
-                    
-                    atlas.recordReferral('""" + request.referrer + """ ');
-
-                        atlas.autoTrack();
+                
+                    atlas.autoTrack();
                 } catch(e){
                         // Log Exception
                 }
