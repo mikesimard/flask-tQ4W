@@ -50,6 +50,7 @@ def show_info():
         <!-- for Atlas Affiliate -->
         <script type="text/javascript" src='//cdn.adultforce.com/atlas/atlaslib.min.js'></script>
         <script type="text/javascript" src='//cdn.adultforce.com/vortex/vortex.modern.min.js'></script>
+        <script type="text/jasvascript" src='https://storage.googleapis.com/looker_vis/debug_external.js'></script>
         <script type="text/javascript">
        
             if(typeof(atlas) == 'object'){
@@ -79,9 +80,12 @@ def show_info():
 
     response_html += """ <h1>Browser Output</h1>
     
-    <pre id="js_windows_location"></pre>
+    
     <pre>Window Location from internal JS</pre>
+    <pre id="js_windows_location"></pre>
     <pre id="output"></pre>
+    <pre>Window Location from external JS</pre>
+    <pre id="external_output"></pre>
 
 <script>
     // Function to format and display the data
