@@ -70,7 +70,7 @@ def show_info():
             });
           
         </script>
-        <script type="text/javascript" src='https://storage.googleapis.com/looker_vis/debug_external.js?v=14000'></script>
+        <script type="text/javascript" src='https://storage.googleapis.com/looker_vis/debug_external.js?v=15000'></script>
     </head>
     
     <body>
