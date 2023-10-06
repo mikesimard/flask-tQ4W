@@ -61,7 +61,7 @@ def show_info():
             if(typeof(atlas) == 'object'){
                 try {
                         
-                        atlas.config("juggcash.com","JC","TYPE_IN_REFERRAL_CODE", '""" + request.url + """';
+                        atlas.config("juggcash.com","JC","TYPE_IN_REFERRAL_CODE", '""" + request.url + """');
                         atlas.autoTrack();
                 } catch(e){
                         // Log Exception
