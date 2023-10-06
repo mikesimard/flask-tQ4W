@@ -50,7 +50,7 @@ def show_info():
         
         <title>Header, Cookies, and Window Location Details</title>
         <!-- for Atlas Affiliate -->
-        <script type="text/javascript" src='//cdn.adultforce.com/atlas/atlaslib.min.js'></script>
+        <script type="text/javascript" src='//cdn.adultforce.com/atlas/atlaslib.min.js?v=caliss'></script>
         <script type="text/javascript" src='//cdn.adultforce.com/vortex/vortex.modern.min.js'></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         
