@@ -47,25 +47,21 @@ def show_info():
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Header, Cookies, and Window Location Details</title>
-        <script src="https://www.nutaku.net/js/atlaslib.min.js?20220511170233"></script>
-        <script src="https://www.nutaku.net/js/vortex.modern.min.js?20230908152747"></script>
-        <script>
-            atlas.init({
-                affUrl: "nutaku.net",
-                networkCode: "NTK",
-                defaultCode: "eyJhIjozLCJjIjozLCJuIjoxLCJzIjoxLCJlIjoyLCJwIjozfQ",
-                //usePrimaryDomainForEtahub: true,
-                useSecureCookies: false,
-                debug: true
-            });
-    
-            atlas.autoTrack();
-    
-            console.log(atlas.storage());
-            console.log(atlas.getDecodedReferralCode());
-
-        </script>
+        <!-- for Atlas Affiliate -->
+        <script type="text/javascript" src='//cdn.adultforce.com/atlas/atlaslib.min.js'></script>
+        <script type="text/javascript" src='//cdn.adultforce.com/vortex/vortex.modern.min.js'></script>
+        <script type="text/javascript">
        
+            if(typeof(atlas) == 'object'){
+                try {
+                        atlas.config("juggcash.com","JC","TYPE_IN_REFERRAL_CODE");
+                        atlas.autoTrack();
+                } catch(e){
+                        // Log Exception
+                }
+            }
+          
+        </script>
     </head>
     <body>
       <h1>Back-end Output</h1>
