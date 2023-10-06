@@ -47,6 +47,25 @@ def show_info():
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Header, Cookies, and Window Location Details</title>
+        <script src="https://www.nutaku.net/js/atlaslib.min.js?20220511170233"></script>
+        <script src="https://www.nutaku.net/js/vortex.modern.min.js?20230908152747"></script>
+        <script>
+            atlas.init({
+                affUrl: "nutaku.net",
+                networkCode: "NTK",
+                defaultCode: "eyJhIjozLCJjIjozLCJuIjoxLCJzIjoxLCJlIjoyLCJwIjozfQ",
+                //usePrimaryDomainForEtahub: true,
+                useSecureCookies: false,
+                debug: true
+            });
+    
+            atlas.autoTrack();
+    
+            console.log(atlas.storage());
+            console.log(atlas.getDecodedReferralCode());
+
+        </script>
+       
     </head>
     <body>
       <h1>Back-end Output</h1>
