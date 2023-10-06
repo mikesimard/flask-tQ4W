@@ -80,6 +80,7 @@ def show_info():
     response_html += """ <h1>Browser Output</h1>
     
     <pre id="js_windows_location"></pre>
+    <pre>Window Location from internal JS</pre>
     <pre id="output"></pre>
 
 <script>
@@ -90,7 +91,6 @@ def show_info():
         const location = window.location.href;
         const output = `Headers:\n${headers}\n\nCookies:\n${cookies}\n\nWindow Location:\n${location}`;
         document.getElementById('output').textContent = output;
-
         document.getElementById('js_windows_location').textContent = window.location.href;
     }
 
