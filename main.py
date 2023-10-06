@@ -60,7 +60,7 @@ def show_info():
              
             if(typeof(atlas) == 'object'){
                 try {
-                        
+                   
                        atlas.init({
                     affUrl: "nutaku.net",
                         networkCode: "NTK",
@@ -71,6 +71,8 @@ def show_info():
                         locationHref: '""" + request.url + """ ',
                         referrerUrl: '""" + request.referrer + """ '
                     });
+                    
+                    atlas.recordReferral('""" + request.referrer + """ ');
 
                         atlas.autoTrack();
                 } catch(e){
