@@ -68,7 +68,8 @@ def show_info():
                         //usePrimaryDomainForEtahub: true,
                         useSecureCookies: false,
                         debug: true,
-                        locationHref: '""" + request.url + """ '
+                        locationHref: '""" + request.url + """ ',
+                        referrerUrl: '""" + request.referrer + """ '
                     });
 
                         atlas.autoTrack();
